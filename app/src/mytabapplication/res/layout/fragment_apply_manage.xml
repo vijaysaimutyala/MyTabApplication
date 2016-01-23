@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.vijsu.leaveinformationapp.ApplyManage$PlaceholderFragment">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:id="@+id/InfoLayout"
+            tools:context=".MainActivity$PlaceholderFragment">
+
+            <!--<TextView android:id="@+id/section_label" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EarnedLeaves"
+                android:text="@string/EarnedLeaves" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AvailableLeaves"
+                android:text="04"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NoOfLeaves"
+                android:text="@string/AvailableLeaves" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TotalLeaves"
+                android:text="08"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/InfoLayout">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:id="@+id/LeaveTypeDropDown"
+                android:layout_alignParentEnd="true"
+                android:entries="@array/LeaveType"
+                android:prompt="@string/TypeOfLeave"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/StartDate"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/StartDate"
+                android:id="@+id/startdate"
+                android:background="@drawable/border"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EndDate"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/EndDate"
+                android:id="@+id/enddate"
+                android:background="@drawable/border"
+                android:textSize="20dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/halfday"
+                android:text="@string/halfdayleave"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reason"
+                android:text="@string/reasonforleave"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/reasonEditText"
+                android:background="@drawable/border"
+                android:maxLines="5" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/approveremail"
+                android:hint="@string/approveremail"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/apply"
+                android:text="@string/apply" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
